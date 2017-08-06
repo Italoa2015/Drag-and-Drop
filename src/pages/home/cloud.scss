@@ -1,0 +1,53 @@
+   page-home {
+       .logicMap {
+
+            height:500px;
+            margin-bottom: 30px;
+
+            .attCloudDesp {
+                float: right;
+                margin-right: 15px;
+            }
+
+            .cloud {
+                height: 200px;
+                margin-left: 500px;
+                margin-right: 0px;
+                margin-bottom: 100px;
+            }
+
+            .cloud img {
+                height:600px;
+                margin-top: -70px;
+            }
+
+            .catched .cloud {
+                background-image: url("../assets/icon/cloud2.svg");
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: 100% auto;
+            }
+
+            .circle {
+                height: 38px;
+                width: 38px;
+                border-radius: 50px;
+                border: solid 1px red;
+                border-style: dashed;
+                margin-left: 5px;
+                margin-top: 4px;
+                float: left;
+            }
+
+            .circle.hasItem {
+                border: solid 2px #1885BB;
+                border-style: solid;
+            }
+
+            .placeHolderGroup .group {
+                display: flex;
+                flex-direction:  rows;
+                justify-content: center;
+            }
+       }
+   }

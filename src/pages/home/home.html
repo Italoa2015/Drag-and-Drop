@@ -1,0 +1,47 @@
+<ion-header>
+  <div class="navBar">
+    <div class="attIcon"><img src="assets/icon/at&t.png" /></div>
+    <div class="attDesp"><span class="separate">|</span><span>AT&T</span></div>
+    <div class="attTitle"><span> Real Time Provisioning</span></div>
+    <div class="attPerson">
+      <ion-icon class="floatRight personSize" name="person"></ion-icon>
+    </div>
+    <div class="attLogin"><span class="login">Log In</span></div>
+  </div>
+  <div class="ciBlock"></div>
+</ion-header>
+
+<ion-content padding class="no-scroll contentBg">
+  <ion-card class="logicMap cardBorder">
+    <ion-card-header class="cardHeader">
+      Logic Map <span class="attCloudDesp">AT&T Cloud</span>
+    </ion-card-header>
+    <ion-card-content>
+      <cloud [is-catched]="isOverlapped" [allItems]="allItems">
+      </cloud>
+      <div>
+        <button ion-button color="light" (click)="resetData()">Retry
+        </button>
+      </div>
+      <div class="clientList">
+        <movable-item [id]="item.id" *ngFor="let item of clients" [class.hint--top]="item.isMoved"
+        [item]="item" 
+        (drop-item)="onItemDropped(item)" data-hint="move until the cloud highlight" (onmove)="onItemMoved(item);">
+        </movable-item>
+      </div>
+      <div class="containerLine" *ngIf="clients.length > 0"></div>
+      <div class="hint" *ngIf="clients.length > 0">try drag a building and drop it to the cloud</div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="historyList cardBorder">
+    <ion-card-header class="cardHeader">
+      Transaction History
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines style="overflow: hidden;">
+        <histories [histories]="histories"></histories>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

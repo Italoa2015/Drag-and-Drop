@@ -1,0 +1,232 @@
+@import "cloud";
+
+page-home {
+   .navBar {
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+
+            .attIcon {
+                width: 10%;
+            }
+
+            .attIcon img {
+                height:50px;
+                margin-top:20px;
+                margin-left:10px;
+                float:right;
+            }
+
+            .attDesp {
+                width:14%;
+                margin-top:30px;
+            }
+
+            .attTitle {
+                margin-top:30px;
+                width: 50%;
+                font-size: 22px;
+            }
+
+            .attTitle span {
+                margin-left: 30%;
+            }
+
+            .attPerson {
+                margin-top:20px;
+                width:10%;
+            }
+
+            .attPerson .floatRight {
+                float: right;
+            }
+
+            .attPerson .personSize {
+                font-size: 40px;
+            }
+
+            .attLogin {
+                margin-top:30px;
+                width:15%;
+            } 
+
+            .attLogin .login {
+                font-size: 20px;
+                margin: auto 30px auto 20px;
+                padding-top: 0px;
+            }
+            
+            .separate {
+                margin: auto 10px auto 10px;
+            }
+   }
+
+   .clientList {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 0px;
+
+            .clientsDesp{
+                font-size: 24px;
+                font-weight: bold;
+                padding-top: 40px;
+            }
+
+            .clientItem {
+                font-size: 60px;
+                margin-left: 10px;
+                display: block;
+                height:70px;
+            }
+
+            .redBorder {
+                border: solid 1px red;
+                border-radius: 5px;
+            }
+   }
+
+   .historyList {
+
+            height: 310px;
+
+            .cardHeader {
+                margin-bottom: 20px;
+            }
+
+            .timestamp {
+                margin: auto 80px 10px 20px;
+                font-size: 20px;
+            }
+
+            .historyItem {
+                font-size: 22px;
+            }
+   }
+   
+   .cardHeader {
+       font-size: 24px;
+       font-weight: bold;
+   }
+
+   .cardBorder {
+       border: 1px solid #e0dedc;
+   }
+
+   .ciBlock {
+       height:50px;
+       background-color:#1885BB;
+   }
+
+   .fixedContent {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+   }
+
+   .no-scroll .scroll-content{
+     overflow: hidden;
+    }
+
+   .containerLine {
+       height: 1px;
+       width: 80%;
+       margin-left: 11%;
+       border: solid 1px gray;
+       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+   }
+
+   .contentBg {
+       background-color: #ECECED;
+   }
+
+   .hint {
+       text-align:center;
+       margin-top:10px;
+       color: red;
+       font-family: 'EB Garamond', serif;
+   }
+
+    @media (width : 768px) 
+    {
+        .logicMap .placeHolderGroup {
+            position: absolute;
+            right: 188px;
+            top: 115px;
+            z-index: 99;
+            border: none;
+            height: 130px;
+            width: 250px;
+        }
+
+        .logicMap .circle {
+            height: 23px;
+            width: 23px;
+        }
+
+        .logicMap .cloud {
+            height: 165px;
+            width: 280px;
+            margin-left: 260px;
+            margin-right: 500px;
+            margin-bottom: 100px;
+        }
+
+        .clientList .clientItem {
+        width: 80px;
+        margin-left: 2px;
+        }
+
+        .clientList .clientItem img {
+        height: 80px;
+        }
+
+        .clientList .clientsDesp{
+        padding-top: 20px;
+        margin-left: -110px;
+        }
+
+        .navBar {
+        font-size: 20px;
+        }
+
+        .navBar .attLogin {
+        width:20%;
+        }
+
+        .navBar .attTitle {
+        width: 45%;
+        }
+    }
+
+    @media (width: 1024px){
+        .logicMap .placeHolderGroup {
+            position: absolute;
+            right: 340px;
+            top: 135px;
+            z-index: 99;
+            height: 170px;
+            width: 346px;
+        }
+    }
+
+     @media (width : 1366px)
+     {
+         .logicMap .placeHolderGroup {
+             position: absolute;
+             right: 545px;
+             top: 155px;
+             z-index: 99;
+             border: none; 
+         }
+
+         .logicMap .cloud {
+             height: 300px;
+             width: 500px;
+             margin-left: 350px;
+         }
+     }
+}
